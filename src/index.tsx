@@ -61,7 +61,7 @@ const getDirectionStyle = (
 
 const EZDrawer: React.FC<Props> = function ({
   open,
-  onClose,
+  onClose = () => {},
   children,
   style,
   overlayColor = '#000',
