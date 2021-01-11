@@ -4,6 +4,11 @@
 
 [![NPM](https://img.shields.io/npm/v/react-ez-drawer.svg)](https://www.npmjs.com/package/react-ez-drawer) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Why this package ?
+low bundle size with fantastic performance
+## Demo 💻🔥
+[click here to see the demo](https://farzin-firoozi.github.io/react-ez-drawer/)
+
 ## Install
 
 ```bash
