@@ -3,9 +3,9 @@ import './styles.scss'
 
 type Props = {
     open: boolean
-    onClose: Function
+    onClose: () => void
     direction: 'left' | 'right' | 'top' | 'bottom'
-    children: React.ReactNode
+    children?: React.ReactNode
     duration?: number
     overlayOpacity?: number
     overlayColor?: String
@@ -68,7 +68,7 @@ const EZDrawer: React.FC<Props> = function ({
     overlayOpacity = 0.4,
     zIndex = 100,
     duration = 500,
-    direction = 'right',
+    direction,
     size = 250,
 }): JSX.Element {
     const overlayStyles: React.CSSProperties = {
@@ -89,9 +89,7 @@ const EZDrawer: React.FC<Props> = function ({
             <input
                 type='checkbox'
                 id='EZDrawer__checkbox'
-                onChange={() => {
-                    onClose()
-                }}
+                onChange={onClose}
                 checked={open}
             />
             <nav
