@@ -30,7 +30,7 @@ yarn add react-modern-drawer
 import React from 'react'
 
 // import component 👇
-import EZDrawer from 'react-modern-drawer'
+import Drawer from 'react-modern-drawer'
 
 //import styles 👇
 import 'react-modern-drawer/dist/index.css'
@@ -44,9 +44,9 @@ const App = () => {
     return (
         <>
             <button onClick={toggleDrawer}>Show</button>
-            <EZDrawer open={isOpen} onClose={toggleDrawer} direction='right'>
+            <Drawer open={isOpen} onClose={toggleDrawer} direction='right'>
                 <div>Hello World</div>
-            </EZDrawer>
+            </Drawer>
         </>
     )
 }
