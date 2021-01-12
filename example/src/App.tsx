@@ -20,7 +20,12 @@ const App = () => {
             }}
         >
             <button onClick={toggleDrawer}>Show</button>
-            <Drawer open={isOpen} onClose={toggleDrawer} direction='right'>
+            <Drawer
+                open={isOpen}
+                onClose={toggleDrawer}
+                direction='right'
+                size={250}
+            >
                 <div>salam</div>
             </Drawer>
         </div>
