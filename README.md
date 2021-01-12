@@ -1,24 +1,27 @@
-# react-ez-drawer
+# react-modern-drawer
 
 > creating drawers made easy!
 
-[![NPM](https://img.shields.io/npm/v/react-ez-drawer.svg)](https://www.npmjs.com/package/react-ez-drawer) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-modern-drawer.svg)](https://www.npmjs.com/package/react-modern-drawer) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Why this package ?
+
 low bundle size with fantastic performance
+
 ## Demo 💻🔥
-[click here to see the demo](https://farzin-firoozi.github.io/react-ez-drawer/)
+
+[click here to see the demo](https://farzin-firoozi.github.io/react-modern-drawer/)
 
 ## Install
 
 ```bash
-npm install --save react-ez-drawer
+npm install --save react-modern-drawer
 ```
 
 or if you are using yarn :
 
 ```
-yarn add react-ez-drawer
+yarn add react-modern-drawer
 ```
 
 ## Usage
@@ -27,25 +30,25 @@ yarn add react-ez-drawer
 import React from 'react'
 
 // import component 👇
-import EZDrawer from 'react-ez-drawer'
+import EZDrawer from 'react-modern-drawer'
 
 //import styles 👇
-import 'react-ez-drawer/dist/index.css'
+import 'react-modern-drawer/dist/index.css'
 
 const App = () => {
-  const [isOpen, setIsOpen] = React.useState(false)
-  const toggleDrawer = () => {
-    setIsOpen((prevState) => !prevState)
-  }
+    const [isOpen, setIsOpen] = React.useState(false)
+    const toggleDrawer = () => {
+        setIsOpen((prevState) => !prevState)
+    }
 
-  return (
-    <>
-      <button onClick={toggleDrawer}>Show</button>
-      <EZDrawer open={isOpen} onClose={toggleDrawer} direction='right'>
-        <div>Hello World</div>
-      </EZDrawer>
-    </>
-  )
+    return (
+        <>
+            <button onClick={toggleDrawer}>Show</button>
+            <EZDrawer open={isOpen} onClose={toggleDrawer} direction='right'>
+                <div>Hello World</div>
+            </EZDrawer>
+        </>
+    )
 }
 
 export default App

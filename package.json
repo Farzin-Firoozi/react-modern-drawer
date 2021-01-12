@@ -1,10 +1,10 @@
 {
-  "name": "react-ez-drawer",
+  "name": "react-modern-drawer",
   "version": "0.1.0",
   "description": "Creating drawers in react made easy!",
   "author": "Farzin-Firoozi",
   "license": "MIT",
-  "repository": "https://github.com/Farzin-Firoozi/react-ez-drawer",
+  "repository": "https://github.com/Farzin-Firoozi/react-modern-drawer",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",

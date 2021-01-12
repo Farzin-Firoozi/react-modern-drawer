@@ -1,7 +1,7 @@
 import React from 'react'
 
-import EZDrawer from 'react-ez-drawer'
-import 'react-ez-drawer/dist/index.css'
+import EZDrawer from 'react-modern-drawer'
+import 'react-modern-drawer/dist/index.css'
 
 const App = () => {
   const [isOpen, setIsOpen] = React.useState(false)
