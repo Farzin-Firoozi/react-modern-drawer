@@ -23,10 +23,11 @@ const App = () => {
             <Drawer
                 open={isOpen}
                 onClose={toggleDrawer}
-                direction='right'
-                size={250}
+                direction='left'
+                size={300}
+                style={{ padding: 40 }}
             >
-                <div>salam</div>
+                <div>Hello World</div>
             </Drawer>
         </div>
     )
