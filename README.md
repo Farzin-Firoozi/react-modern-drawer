@@ -73,13 +73,17 @@ export default App
 | children       | React.ReactNode     | no       | null      | Any ReactNode                     | This is the same as props.children                                                          |
 | className      | string              | no       | undefined | -                                 | normal regular classNames and stuff                                                         |
 
+## Support
+
+If you like this package please consider giving it a star.
+
 ## Contribution
 
 clone the project and run `yarn install` then run `yarn start` to run the main project.
 
 then `cd example` and run `yarn start` to start the development example in order to test the component.
 
-any PRs are welcome !!!
+any PRs are welcome!
 
 ## License
 
