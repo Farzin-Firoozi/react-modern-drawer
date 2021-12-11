@@ -4,9 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/react-modern-drawer.svg)](https://www.npmjs.com/package/react-modern-drawer) ![npm](https://img.shields.io/npm/dt/react-modern-drawer)![npm](https://img.shields.io/npm/dw/react-modern-drawer)![npm bundle size (version)](https://img.shields.io/bundlephobia/min/react-modern-drawer/0.1.0)![npm bundle size (version)](https://img.shields.io/bundlephobia/minzip/react-modern-drawer/0.1.0)![NPM](https://img.shields.io/npm/l/react-modern-drawer)
 
-## Why this package ?
-
-low bundle size with fantastic performance
+## low bundle size with fantastic performance
 
 ## Demo 💻🔥
 
@@ -44,7 +42,12 @@ const App = () => {
     return (
         <>
             <button onClick={toggleDrawer}>Show</button>
-            <Drawer open={isOpen} onClose={toggleDrawer} direction='right'>
+            <Drawer
+                open={isOpen}
+                onClose={toggleDrawer}
+                direction='right'
+                className='bla bla bla'
+            >
                 <div>Hello World</div>
             </Drawer>
         </>
@@ -56,18 +59,19 @@ export default App
 
 ## API
 
-| api            | type                | required | default  | value                             | desciption                                                                                  |
-| -------------- | ------------------- | -------- | -------- | --------------------------------- | ------------------------------------------------------------------------------------------- |
-| direction      | string              | yes      | "right"  | "right" , "left" , "top","bottom" | Selecting the direction that drawer opens                                                   |
-| open           | boolean             | yes      | false    | true , false                      | Select when to show drawer                                                                  |
-| onClose        | function            | yes      | ( )=>{ } | any executable function           | This function is called when clicking on backdrop layer usually used for closing the drawer |
-| size           | number              | no       | 250      | Any positive Integer              | Determines the size of drawer in pixels                                                     |
-| style          | React.CSSProperties | no       | null     | Normal stylings                   | Can be used for inline styles                                                               |
-| duration       | number              | no       | 300      | Any positive Integer              | Determines the duration of opening the drawer                                               |
-| overlayOpacity | number              | no       | 0.4      | Number between 0 and 1            | Determines the opacity of overlay                                                           |
-| overlayColor   | string              | no       | "#000"   | Any color code                    | Determines the color of overlay                                                             |
-| zIndex         | number              | no       | 100      | Any positive Integer              | Determines the zIndex of drawer                                                             |
-| children       | React.ReactNode     | no       | null     | Any ReactNode                     | This is the same as props.children                                                          |
+| api            | type                | required | default   | value                             | desciption                                                                                  |
+| -------------- | ------------------- | -------- | --------- | --------------------------------- | ------------------------------------------------------------------------------------------- |
+| direction      | string              | yes      | "right"   | "right" , "left" , "top","bottom" | Selecting the direction that drawer opens                                                   |
+| open           | boolean             | yes      | false     | true , false                      | Select when to show drawer                                                                  |
+| onClose        | function            | yes      | ( )=>{ }  | any executable function           | This function is called when clicking on backdrop layer usually used for closing the drawer |
+| size           | number              | no       | 250       | Any positive Integer              | Determines the size of drawer in pixels                                                     |
+| style          | React.CSSProperties | no       | null      | Normal stylings                   | Can be used for inline styles                                                               |
+| duration       | number              | no       | 300       | Any positive Integer              | Determines the duration of opening the drawer                                               |
+| overlayOpacity | number              | no       | 0.4       | Number between 0 and 1            | Determines the opacity of overlay                                                           |
+| overlayColor   | string              | no       | "#000"    | Any color code                    | Determines the color of overlay                                                             |
+| zIndex         | number              | no       | 100       | Any positive Integer              | Determines the zIndex of drawer                                                             |
+| children       | React.ReactNode     | no       | null      | Any ReactNode                     | This is the same as props.children                                                          |
+| className      | string              | no       | undefined | -                                 | normal regular classNames and stuff                                                         |
 
 ## Contribution
 
