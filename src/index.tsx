@@ -12,6 +12,7 @@ type Props = {
     style?: React.CSSProperties
     zIndex?: number
     size?: number
+    className?: string | undefined
 }
 
 const getDirectionStyle = (
@@ -70,6 +71,7 @@ const EZDrawer: React.FC<Props> = function ({
     duration = 500,
     direction,
     size = 250,
+    className,
 }): JSX.Element {
     const overlayStyles: React.CSSProperties = {
         backgroundColor: `${overlayColor}`,
@@ -96,6 +98,7 @@ const EZDrawer: React.FC<Props> = function ({
                 role='navigation'
                 id='EZDrawer__container'
                 style={drawerStyles}
+                className={className}
             >
                 {children}
             </nav>
