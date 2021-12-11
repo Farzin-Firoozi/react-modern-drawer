@@ -9,6 +9,15 @@ const App = () => {
         setIsOpen((prevState) => !prevState)
     }
 
+    const btnStyle = {
+        backgroundColor: '#03adfc',
+        color: '#fff',
+        borderRadius: '5px',
+        border: 'none',
+        padding: '10px 25px',
+        cursor: 'pointer',
+    }
+
     return (
         <div
             style={{
@@ -19,15 +28,17 @@ const App = () => {
                 display: 'flex',
             }}
         >
-            <button onClick={toggleDrawer}>Show</button>
+            <button style={btnStyle} onClick={toggleDrawer}>
+                Show Drawer
+            </button>
             <Drawer
                 open={isOpen}
                 onClose={toggleDrawer}
                 direction='left'
-                size={300}
-                style={{ padding: 40 }}
+                size={200}
+                style={{ padding: 20 }}
             >
-                <div>Hello World</div>
+                <div style={{ fontWeight: 'bold' }}>Hello World!</div>
             </Drawer>
         </div>
     )
