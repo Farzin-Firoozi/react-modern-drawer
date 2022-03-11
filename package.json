@@ -1,6 +1,6 @@
 {
     "name": "react-modern-drawer",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Creating drawers in react made easy!",
     "author": "Farzin-Firoozi",
     "license": "MIT",
@@ -17,9 +17,6 @@
         "prepare": "run-s build",
         "predeploy": "cd example && yarn install && yarn run build",
         "deploy": "gh-pages -d example/build"
-    },
-    "peerDependencies": {
-        "react": "^16.0.0"
     },
     "devDependencies": {
         "@types/node": "^12.12.38",

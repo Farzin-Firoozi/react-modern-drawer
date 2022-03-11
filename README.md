@@ -2,7 +2,7 @@
 
 > creating drawers made easy!
 
-[![NPM](https://img.shields.io/npm/v/react-modern-drawer.svg)](https://www.npmjs.com/package/react-modern-drawer) ![npm](https://img.shields.io/npm/dt/react-modern-drawer)![npm](https://img.shields.io/npm/dw/react-modern-drawer)![npm bundle size (version)](https://img.shields.io/bundlephobia/min/react-modern-drawer/0.1.0)![npm bundle size (version)](https://img.shields.io/bundlephobia/minzip/react-modern-drawer/0.1.0)![NPM](https://img.shields.io/npm/l/react-modern-drawer)
+[![NPM](https://img.shields.io/npm/v/react-modern-drawer.svg)](https://www.npmjs.com/package/react-modern-drawer) ![npm](https://img.shields.io/npm/dt/react-modern-drawer) ![npm](https://img.shields.io/npm/dw/react-modern-drawer) ![npm bundle size (version)](https://img.shields.io/bundlephobia/min/react-modern-drawer/1.0.2) ![npm bundle size (version)](https://img.shields.io/bundlephobia/minzip/react-modern-drawer/1.0.2) ![NPM](https://img.shields.io/npm/l/react-modern-drawer)
 
 ## low bundle size with fantastic performance
 
@@ -45,7 +45,7 @@ const App = () => {
             <Drawer
                 open={isOpen}
                 onClose={toggleDrawer}
-                direction='right'
+                direction='left'
                 className='bla bla bla'
             >
                 <div>Hello World</div>
