@@ -3,12 +3,13 @@ import './styles.scss'
 
 type Props = {
     open: boolean
-    onClose: () => void
+    onClose?: () => void
     direction: 'left' | 'right' | 'top' | 'bottom'
     children?: React.ReactNode
     duration?: number
     overlayOpacity?: number
     overlayColor?: String
+    enableOverlay?: boolean
     style?: React.CSSProperties
     zIndex?: number
     size?: number
@@ -65,6 +66,7 @@ const EZDrawer: React.FC<Props> = function ({
     onClose = () => {},
     children,
     style,
+    enableOverlay = true,
     overlayColor = '#000',
     overlayOpacity = 0.4,
     zIndex = 100,
@@ -102,11 +104,13 @@ const EZDrawer: React.FC<Props> = function ({
             >
                 {children}
             </nav>
-            <label
-                htmlFor='EZDrawer__checkbox'
-                id='EZDrawer__overlay'
-                style={overlayStyles}
-            />
+            {enableOverlay && (
+                <label
+                    htmlFor='EZDrawer__checkbox'
+                    id='EZDrawer__overlay'
+                    style={overlayStyles}
+                />
+            )}
         </div>
     )
 }
