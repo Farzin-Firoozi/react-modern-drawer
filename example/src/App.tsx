@@ -37,7 +37,6 @@ const App = () => {
                 direction='left'
                 size={200}
                 style={{ padding: 20 }}
-                enableOverlay={false}
             >
                 <div style={{ fontWeight: 'bold' }}>Hello World!</div>
             </Drawer>
