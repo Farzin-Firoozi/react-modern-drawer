@@ -75,6 +75,8 @@ const EZDrawer: React.FC<Props> = function ({
     size = 250,
     className,
 }): JSX.Element {
+    const idSuffix = Date.now().toString()
+    
     const overlayStyles: React.CSSProperties = {
         backgroundColor: `${overlayColor}`,
         opacity: `${overlayOpacity}`,
@@ -89,25 +91,27 @@ const EZDrawer: React.FC<Props> = function ({
     }
 
     return (
-        <div id='EZDrawer'>
+        <div id={'EZDrawer' + idSuffix} className='EZDrawer'>
             <input
                 type='checkbox'
-                id='EZDrawer__checkbox'
+                id={'EZDrawer__checkbox' + idSuffix}
+                className='EZDrawer__checkbox'
                 onChange={onClose}
                 checked={open}
             />
             <nav
                 role='navigation'
-                id='EZDrawer__container'
+                id={'EZDrawer__container' + idSuffix}
                 style={drawerStyles}
-                className={className}
+                className={'EZDrawer__container ' + className}
             >
                 {children}
             </nav>
             {enableOverlay && (
                 <label
-                    htmlFor='EZDrawer__checkbox'
-                    id='EZDrawer__overlay'
+                    htmlFor={'EZDrawer__checkbox' + idSuffix}
+                    id={'EZDrawer__overlay' + idSuffix}
+                    className='EZDrawer__overlay'
                     style={overlayStyles}
                 />
             )}
