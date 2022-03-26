@@ -12,13 +12,13 @@ type Props = {
     enableOverlay?: boolean
     style?: React.CSSProperties
     zIndex?: number
-    size?: number
+    size?: number | string
     className?: string | undefined
 }
 
 const getDirectionStyle = (
     dir: string,
-    size?: number,
+    size?: number | string,
 ): {} | React.CSSProperties => {
     switch (dir) {
         case 'left':
@@ -75,8 +75,8 @@ const EZDrawer: React.FC<Props> = function ({
     size = 250,
     className,
 }): JSX.Element {
-    const idSuffix = Date.now().toString()
-    
+    const idSuffix = (Math.random() + 1).toString(36).substring(7)
+
     const overlayStyles: React.CSSProperties = {
         backgroundColor: `${overlayColor}`,
         opacity: `${overlayOpacity}`,

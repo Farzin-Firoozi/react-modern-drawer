@@ -1,6 +1,6 @@
 {
     "name": "react-modern-drawer",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Creating drawers in react made easy!",
     "author": "Farzin-Firoozi",
     "license": "MIT",
@@ -57,6 +57,7 @@
         "rc-drawer",
         "easy-drawer",
         "react-drawer",
+        "react-modern",
         "touch-drawer",
         "modern-drawer",
         "material-drawer",
