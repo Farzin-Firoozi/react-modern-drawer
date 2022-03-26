@@ -1,21 +1,21 @@
-#EZDrawer {
-    #EZDrawer__checkbox {
+.EZDrawer {
+    .EZDrawer__checkbox {
         display: none;
 
         &:checked {
-            & ~ #EZDrawer__overlay {
+            & ~ .EZDrawer__overlay {
                 display: block;
                 opacity: 1;
             }
 
-            & ~ #EZDrawer__container {
+            & ~ .EZDrawer__container {
                 visibility: visible;
                 transform: translate3d(0, 0, 0) !important;
             }
         }
     }
 
-    #EZDrawer__overlay {
+    .EZDrawer__overlay {
         display: none;
         height: 100vh;
         left: 0;
@@ -24,7 +24,7 @@
         width: 100%;
     }
 
-    #EZDrawer__container {
+    .EZDrawer__container {
         position: fixed;
         visibility: hidden;
         background: white;
