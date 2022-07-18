@@ -14,6 +14,7 @@ type Props = {
     zIndex?: number
     size?: number | string
     className?: string | undefined
+    customIdSuffix?: string | undefined
 }
 
 const getDirectionStyle = (
@@ -74,8 +75,11 @@ const EZDrawer: React.FC<Props> = function ({
     direction,
     size = 250,
     className,
+    customIdSuffix,
 }): JSX.Element {
-    const idSuffix = (Math.random() + 1).toString(36).substring(7)
+    const idSuffix = React.useMemo(() => {
+        return customIdSuffix || (Math.random() + 1).toString(36).substring(7)
+    }, [customIdSuffix])
 
     const overlayStyles: React.CSSProperties = {
         backgroundColor: `${overlayColor}`,
