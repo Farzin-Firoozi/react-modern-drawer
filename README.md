@@ -70,21 +70,22 @@ export default App
 
 ## API
 
-| api            | type                | required | default                                  | value                                     | desciption                                                                                  |
-| -------------- | ------------------- | -------- | ---------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------- |
-| direction      | string              | yes      | "right"                                  | "right" , "left" , "top","bottom"         | Selecting the direction that drawer opens                                                   |
-| open           | boolean             | yes      | false                                    | true , false                              | Select when to show drawer                                                                  |
-| onClose        | function            | no       | ( )=>{ }                                 | any executable function                   | This function is called when clicking on backdrop layer usually used for closing the drawer |
-| size           | number or string    | no       | 250                                      | integer or '{integer}px' or '{integer}vw' | Determines the size of drawer                                                               |
-| style          | React.CSSProperties | no       | null                                     | Normal stylings                           | Can be used for inline styles                                                               |
-| duration       | number              | no       | 300                                      | Any positive Integer                      | Determines the duration of opening the drawer                                               |
-| overlayOpacity | number              | no       | 0.4                                      | Number between 0 and 1                    | Determines the opacity of overlay                                                           |
-| overlayColor   | string              | no       | "#000"                                   | Any color code                            | Determines the color of overlay                                                             |
-| enableOverlay  | boolean             | no       | true                                     | true , false                              | Determines whether to show the overlay                                                      |
-| zIndex         | number              | no       | 100                                      | Any positive Integer                      | Determines the zIndex of drawer                                                             |
-| children       | React.ReactNode     | no       | null                                     | Any ReactNode                             | This is the same as props.children                                                          |
-| className      | string              | no       | undefined                                | -                                         | normal regular classNames and stuff                                                         |
-| customIdSuffix | string              | no       | A random string based on `Math.random()` | -                                         | Used for making different ids for drawers, can be customized for special cases.             |
+| api                  | type                | required | default                                  | value                                     | desciption                                                                                  |
+| -------------------- | ------------------- | -------- | ---------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------- |
+| direction            | string              | yes      | "right"                                  | "right" , "left" , "top","bottom"         | Selecting the direction that drawer opens                                                   |
+| open                 | boolean             | yes      | false                                    | true , false                              | Select when to show drawer                                                                  |
+| onClose              | function            | no       | ( )=>{ }                                 | any executable function                   | This function is called when clicking on backdrop layer usually used for closing the drawer |
+| size                 | number or string    | no       | 250                                      | integer or '{integer}px' or '{integer}vw' | Determines the size of drawer                                                               |
+| style                | React.CSSProperties | no       | null                                     | Normal stylings                           | Can be used for inline styles                                                               |
+| duration             | number              | no       | 300                                      | Any positive Integer                      | Determines the duration of opening the drawer                                               |
+| overlayOpacity       | number              | no       | 0.4                                      | Number between 0 and 1                    | Determines the opacity of overlay                                                           |
+| overlayColor         | string              | no       | "#000"                                   | Any color code                            | Determines the color of overlay                                                             |
+| enableOverlay        | boolean             | no       | true                                     | true , false                              | Determines whether to show the overlay                                                      |
+| zIndex               | number              | no       | 100                                      | Any positive Integer                      | Determines the zIndex of drawer                                                             |
+| children             | React.ReactNode     | no       | null                                     | Any ReactNode                             | This is the same as props.children                                                          |
+| className            | string              | no       | undefined                                | -                                         | normal regular classNames and stuff                                                         |
+| customIdSuffix       | string              | no       | A random string based on `Math.random()` | -                                         | Used for making different ids for drawers, can be customized for special cases.             |
+| lockBackgroundScroll | boolean             | no       | false                                    | -                                         | Locks the body scroll when drawer is open.                                                  |
 
 ## Support
 
