@@ -1,10 +1,12 @@
-import * as React from 'react'
+import React, { useEffect, useMemo, useRef } from 'react'
+import type { CSSProperties } from 'react'
 import './styles.scss'
 
 type Props = {
     open: boolean
     onClose?: () => void
     direction: 'left' | 'right' | 'top' | 'bottom'
+    lockBackgroundScroll?: boolean
     children?: React.ReactNode
     duration?: number
     overlayOpacity?: number
@@ -62,32 +64,53 @@ const getDirectionStyle = (
     }
 }
 
-const EZDrawer: React.FC<Props> = function ({
-    open,
-    onClose = () => {},
-    children,
-    style,
-    enableOverlay = true,
-    overlayColor = '#000',
-    overlayOpacity = 0.4,
-    zIndex = 100,
-    duration = 500,
-    direction,
-    size = 250,
-    className,
-    customIdSuffix,
-}): JSX.Element {
-    const idSuffix = React.useMemo(() => {
+const EZDrawer: React.FC<Props> = (props) => {
+    const {
+        open,
+        onClose = () => {},
+        children,
+        style,
+        enableOverlay = true,
+        overlayColor = '#000',
+        overlayOpacity = 0.4,
+        zIndex = 100,
+        duration = 500,
+        direction,
+        size = 250,
+        className,
+        customIdSuffix,
+        lockBackgroundScroll = false,
+    } = props
+
+    const bodyRef = useRef<HTMLBodyElement | null>(null)
+
+    useEffect(() => {
+        const updatePageScroll = () => {
+            bodyRef.current = window.document.querySelector('body')
+
+            if (bodyRef.current && lockBackgroundScroll) {
+                if (open) {
+                    bodyRef.current.style.overflow = 'hidden'
+                } else {
+                    bodyRef.current.style.overflow = ''
+                }
+            }
+        }
+
+        updatePageScroll()
+    }, [open])
+
+    const idSuffix = useMemo(() => {
         return customIdSuffix || (Math.random() + 1).toString(36).substring(7)
     }, [customIdSuffix])
 
-    const overlayStyles: React.CSSProperties = {
+    const overlayStyles: CSSProperties = {
         backgroundColor: `${overlayColor}`,
         opacity: `${overlayOpacity}`,
         zIndex: zIndex,
     }
 
-    const drawerStyles: React.CSSProperties = {
+    const drawerStyles: CSSProperties = {
         zIndex: zIndex + 1,
         transitionDuration: `${duration}ms`,
         ...getDirectionStyle(direction, size),
