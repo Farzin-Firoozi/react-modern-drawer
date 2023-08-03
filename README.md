@@ -84,6 +84,7 @@ export default App
 | zIndex               | number              | no       | 100                                      | Any positive Integer                      | Determines the zIndex of drawer                                                             |
 | children             | React.ReactNode     | no       | null                                     | Any ReactNode                             | This is the same as props.children                                                          |
 | className            | string              | no       | undefined                                | -                                         | normal regular classNames and stuff                                                         |
+| overlayClassName     | string              | no       | undefined                                | -                                         | normal regular classNames and stuff                                                         |
 | customIdSuffix       | string              | no       | A random string based on `Math.random()` | -                                         | Used for making different ids for drawers, can be customized for special cases.             |
 | lockBackgroundScroll | boolean             | no       | false                                    | -                                         | Locks the body scroll when drawer is open.                                                  |
 
