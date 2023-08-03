@@ -15,8 +15,9 @@ type Props = {
     style?: React.CSSProperties
     zIndex?: number
     size?: number | string
-    className?: string | undefined
-    customIdSuffix?: string | undefined
+    className?: string
+    customIdSuffix?: string
+    overlayClassName?: string
 }
 
 const getDirectionStyle = (
@@ -80,6 +81,7 @@ const EZDrawer: React.FC<Props> = (props) => {
         className,
         customIdSuffix,
         lockBackgroundScroll = false,
+        overlayClassName = '',
     } = props
 
     const bodyRef = useRef<HTMLBodyElement | null>(null)
@@ -138,7 +140,7 @@ const EZDrawer: React.FC<Props> = (props) => {
                 <label
                     htmlFor={'EZDrawer__checkbox' + idSuffix}
                     id={'EZDrawer__overlay' + idSuffix}
-                    className='EZDrawer__overlay'
+                    className={'EZDrawer__overlay ' + overlayClassName}
                     style={overlayStyles}
                 />
             )}
