@@ -2,17 +2,19 @@ import React, { useEffect, useMemo, useRef } from 'react'
 import type { CSSProperties } from 'react'
 import './styles.scss'
 
+type IDirection = 'left' | 'right' | 'top' | 'bottom'
+
 type Props = {
     open: boolean
     onClose?: () => void
-    direction: 'left' | 'right' | 'top' | 'bottom'
+    direction: IDirection
     lockBackgroundScroll?: boolean
     children?: React.ReactNode
     duration?: number
     overlayOpacity?: number
     overlayColor?: String
     enableOverlay?: boolean
-    style?: React.CSSProperties
+    style?: CSSProperties
     zIndex?: number
     size?: number | string
     className?: string
@@ -20,49 +22,47 @@ type Props = {
     overlayClassName?: string
 }
 
+type DirectionStyle = Pick<
+    CSSProperties,
+    'top' | 'left' | 'right' | 'bottom' | 'width' | 'height' | 'transform'
+>
 const getDirectionStyle = (
-    dir: string,
+    dir: IDirection,
     size?: number | string,
-): {} | React.CSSProperties => {
-    switch (dir) {
-        case 'left':
-            return {
-                top: 0,
-                left: 0,
-                transform: 'translate3d(-100%, 0, 0)',
-                width: size,
-                height: '100vh',
-            }
-        case 'right':
-            return {
-                top: 0,
-                right: 0,
-                transform: 'translate3d(100%, 0, 0)',
-                width: size,
-                height: '100vh',
-            }
-        case 'bottom':
-            return {
-                left: 0,
-                right: 0,
-                bottom: 0,
-                transform: 'translate3d(0, 100%, 0)',
-                width: '100%',
-                height: size,
-            }
-        case 'top':
-            return {
-                left: 0,
-                right: 0,
-                top: 0,
-                transform: 'translate3d(0, -100%, 0)',
-                width: '100%',
-                height: size,
-            }
-
-        default:
-            return {}
+): DirectionStyle => {
+    const directionStyle: Record<IDirection, DirectionStyle> = {
+        left: {
+            top: 0,
+            left: 0,
+            transform: 'translate3d(-100%, 0, 0)',
+            width: size,
+            height: '100vh',
+        },
+        right: {
+            top: 0,
+            right: 0,
+            transform: 'translate3d(100%, 0, 0)',
+            width: size,
+            height: '100vh',
+        },
+        bottom: {
+            left: 0,
+            right: 0,
+            bottom: 0,
+            transform: 'translate3d(0, 100%, 0)',
+            width: '100%',
+            height: size,
+        },
+        top: {
+            left: 0,
+            right: 0,
+            top: 0,
+            transform: 'translate3d(0, -100%, 0)',
+            width: '100%',
+            height: size,
+        },
     }
+    return directionStyle[dir]
 }
 
 const EZDrawer: React.FC<Props> = (props) => {
@@ -89,16 +89,10 @@ const EZDrawer: React.FC<Props> = (props) => {
     useEffect(() => {
         const updatePageScroll = () => {
             bodyRef.current = window.document.querySelector('body')
-
             if (bodyRef.current && lockBackgroundScroll) {
-                if (open) {
-                    bodyRef.current.style.overflow = 'hidden'
-                } else {
-                    bodyRef.current.style.overflow = ''
-                }
+                bodyRef.current.style.overflow = open ? 'hidden' : ''
             }
         }
-
         updatePageScroll()
     }, [open])
 
@@ -107,8 +101,8 @@ const EZDrawer: React.FC<Props> = (props) => {
     }, [customIdSuffix])
 
     const overlayStyles: CSSProperties = {
-        backgroundColor: `${overlayColor}`,
-        opacity: `${overlayOpacity}`,
+        backgroundColor: overlayColor.toString(),
+        opacity: overlayOpacity,
         zIndex: zIndex,
     }
 
