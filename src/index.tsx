@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo, useRef } from 'react'
 import type { CSSProperties } from 'react'
-import './styles.scss'
+import './styles.css'
 
 type IDirection = 'left' | 'right' | 'top' | 'bottom'
 
 type Props = {
     open: boolean
-    onClose?: () => void
+    onClose?: VoidFunction
     direction: IDirection
     lockBackgroundScroll?: boolean
     children?: React.ReactNode

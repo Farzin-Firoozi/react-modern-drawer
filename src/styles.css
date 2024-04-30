@@ -1,0 +1,26 @@
+.EZDrawer .EZDrawer__checkbox {
+    display: none;
+}
+.EZDrawer .EZDrawer__checkbox:checked ~ .EZDrawer__overlay {
+    display: block;
+    opacity: 1;
+}
+.EZDrawer .EZDrawer__checkbox:checked ~ .EZDrawer__container {
+    visibility: visible;
+    transform: translate3d(0, 0, 0) !important;
+}
+.EZDrawer .EZDrawer__overlay {
+    display: none;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.EZDrawer .EZDrawer__container {
+    position: fixed;
+    visibility: hidden;
+    background: white;
+    transition: all;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
