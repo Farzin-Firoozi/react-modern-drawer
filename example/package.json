@@ -1,29 +1,34 @@
 {
-    "name": "react-modern-drawer-example",
-    "homepage": ".",
-    "version": "0.0.1",
-    "private": true,
-    "scripts": {
-        "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
-        "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
-        "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
-        "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
-    },
-    "dependencies": {
-        "@types/node": "link:../node_modules/@types/node",
-        "@types/react": "link:../node_modules/@types/react",
-        "@types/react-dom": "link:../node_modules/@types/react-dom",
-        "eslint-config-react-app": "link:../node_modules/eslint-config-react-app",
-        "react": "link:../node_modules/react",
-        "react-dom": "link:../node_modules/react-dom",
-        "react-modern-drawer": "link:..",
-        "react-scripts": "link:../node_modules/react-scripts",
-        "typescript": "link:../node_modules/typescript"
-    },
-    "devDependencies": {
-        "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
-    },
-    "eslintConfig": {
-        "extends": "react-app"
-    }
+  "name": "react-modern-drawer-example",
+  "homepage": ".",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
+    "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
+    "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
+    "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
+  },
+  "dependencies": {
+    "@types/node": "link:../node_modules/@types/node",
+    "@types/react": "link:../node_modules/@types/react",
+    "@types/react-dom": "link:../node_modules/@types/react-dom",
+    "react": "link:../node_modules/react",
+    "react-dom": "link:../node_modules/react-dom",
+    "react-modern-drawer": "link:..",
+    "react-scripts": "link:../node_modules/react-scripts",
+    "typescript": "link:../node_modules/typescript"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
