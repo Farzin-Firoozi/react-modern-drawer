@@ -1,7 +1,7 @@
 {
     "name": "react-modern-drawer-example",
     "homepage": ".",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "private": true,
     "scripts": {
         "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
@@ -25,17 +25,5 @@
     },
     "eslintConfig": {
         "extends": "react-app"
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
     }
 }
