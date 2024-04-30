@@ -5,11 +5,11 @@
 [![NPM](https://img.shields.io/npm/v/react-modern-drawer.svg)](https://www.npmjs.com/package/react-modern-drawer)
 ![npm](https://img.shields.io/npm/dt/react-modern-drawer)
 ![npm](https://img.shields.io/npm/dw/react-modern-drawer)
-![npm bundle size (version)](https://img.shields.io/bundlephobia/min/react-modern-drawer/1.2.2)
-![npm bundle size (version)](https://img.shields.io/bundlephobia/minzip/react-modern-drawer/1.2.2)
+![npm bundle size (version)](https://img.shields.io/bundlephobia/min/react-modern-drawer/1.3.0)
+![npm bundle size (version)](https://img.shields.io/bundlephobia/minzip/react-modern-drawer/1.3.0)
 ![NPM](https://img.shields.io/npm/l/react-modern-drawer)
 
-## low bundle size with fantastic performance
+## Low bundle size with fantastic performance
 
 ## Demo 💻🔥
 
