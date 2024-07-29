@@ -5,6 +5,7 @@
     "author": "Farzin-Firoozi",
     "license": "MIT",
     "repository": "https://github.com/Farzin-Firoozi/react-modern-drawer",
+    "css": "dist/index.css",
     "main": "dist/index.js",
     "module": "dist/index.modern.js",
     "source": "src/index.tsx",
