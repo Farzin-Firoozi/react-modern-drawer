@@ -82,6 +82,7 @@ const App = () => {
                 direction='left'
                 size={300}
                 enableOverlay={enableOverlay}
+                closeIcon
             >
                 <DrawerBody />
             </Drawer>
@@ -91,6 +92,7 @@ const App = () => {
                 direction='right'
                 size={300}
                 enableOverlay={enableOverlay}
+                closeIcon
             >
                 <DrawerBody />
             </Drawer>
@@ -101,6 +103,7 @@ const App = () => {
                 direction='top'
                 size={300}
                 enableOverlay={enableOverlay}
+                closeIcon
             >
                 <DrawerBody />
             </Drawer>
@@ -110,6 +113,7 @@ const App = () => {
                 direction='bottom'
                 size={300}
                 enableOverlay={enableOverlay}
+                closeIcon
             >
                 <DrawerBody />
             </Drawer>
