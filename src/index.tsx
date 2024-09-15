@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef } from 'react'
-import type { CSSProperties } from 'react'
+import type { CSSProperties, ReactElement, SVGProps } from 'react'
 import './styles.css'
 
 type IDirection = 'left' | 'right' | 'top' | 'bottom'
@@ -20,6 +20,7 @@ type Props = {
     className?: string
     customIdSuffix?: string
     overlayClassName?: string
+    closeIcon?: ReactElement | boolean
 }
 
 type DirectionStyle = Pick<
@@ -65,6 +66,23 @@ const getDirectionStyle = (
     return directionStyle[dir]
 }
 
+const CloseIcon = (props: SVGProps<SVGSVGElement>) => (
+    <svg
+        width='30px'
+        height='30px'
+        viewBox='0 0 1.35 1.35'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+        cursor='pointer'
+        {...props}
+    >
+        <path
+            d='M0.298 0.298a0.056 0.056 0 0 1 0.08 0L0.675 0.595l0.298 -0.298a0.056 0.056 0 1 1 0.08 0.08L0.755 0.675l0.298 0.298a0.056 0.056 0 0 1 -0.08 0.08L0.675 0.755l-0.298 0.298a0.056 0.056 0 0 1 -0.08 -0.08L0.595 0.675 0.298 0.377a0.056 0.056 0 0 1 0 -0.08'
+            fill='#0D0D0D'
+        />
+    </svg>
+)
+
 const EZDrawer: React.FC<Props> = (props) => {
     const {
         open,
@@ -82,6 +100,7 @@ const EZDrawer: React.FC<Props> = (props) => {
         customIdSuffix,
         lockBackgroundScroll = false,
         overlayClassName = '',
+        closeIcon = false,
     } = props
 
     const bodyRef = useRef<HTMLBodyElement | null>(null)
@@ -128,6 +147,13 @@ const EZDrawer: React.FC<Props> = (props) => {
                 style={drawerStyles}
                 className={'EZDrawer__container ' + className}
             >
+                <span className='EZDrawer__close' onClick={onClose}>
+                    {closeIcon && typeof closeIcon === 'boolean' ? (
+                        <CloseIcon />
+                    ) : (
+                        closeIcon
+                    )}
+                </span>
                 {children}
             </nav>
             {enableOverlay && (
